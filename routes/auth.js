@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const { body, validationResult } = require('express-validator');
 const User = require('../models/User');
 
-
+//REGISTRAR
 router.post('/register', [
   body('nome').notEmpty().withMessage('Nome é obrigatório'),
   body('email').isEmail().withMessage('Email inválido'),
@@ -18,7 +18,7 @@ router.post('/register', [
 
     const { nome, email, senha } = req.body;
 
-    
+   //CASO JJA EXISTIR UM USUARIO 
     let user = await User.findOne({ email });
     if (user) {
       return res.status(400).json({ message: 'Usuário já existe' });
@@ -35,6 +35,7 @@ router.post('/register', [
       { expiresIn: '7d' }
     );
 
+    //SUCESSO
     res.status(201).json({
       message: 'Usuário registrado com sucesso',
       token,
