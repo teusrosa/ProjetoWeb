@@ -3,7 +3,7 @@ const router = express.Router();
 const Autor = require('../models/Autor');
 const auth = require('../middleware/auth');
 
-
+//PESQUISAS SOBRE AUTORES
 router.get('/', async (req, res) => {
   try {
     const autores = await Autor.find().sort({ nome: 1 });
