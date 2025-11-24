@@ -3,7 +3,7 @@ const router = express.Router();
 const CD = require('../models/CD');
 const auth = require('../middleware/auth');
 
-
+//BUSCA POR CDs
 router.get('/', async (req, res) => {
   try {
     const cds = await CD.find().populate('artista', 'nome').sort({ titulo: 1 });
