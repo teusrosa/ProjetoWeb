@@ -1,15 +1,4 @@
-# Projeto Web - Sistema de Gerenciamento
-
-Sistema completo para gerenciamento de Livros, DVDs, CDs e Autores com API REST e MongoDB.
-
-## Características
-
-- **4 Entidades**: Livros, DVDs, CDs e Autores com relacionamentos
-- **API REST** completa (CRUD)
-- **MongoDB** como banco de dados
-- **Autenticação JWT** simples
-- **Métodos GET** públicos
-- **Métodos POST, PUT, DELETE** requerem autenticação
+# PPROJETO WEB: CRIEI ESSE GUIA PARA A INSTALAÇÃO
 
 ## Instalação
 
